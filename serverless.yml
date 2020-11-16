@@ -1,0 +1,7 @@
+org: idougwarner
+app: hch-auth
+component: express
+name: express-starter
+
+inputs:
+  src: ./
