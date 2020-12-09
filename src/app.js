@@ -50,7 +50,7 @@ app.post('/test-email', (req, res) => {
 
 // Routes
 app.get('/*', (req, res) => {
-  res.send(`Request received: ${req.method} - ${req.path} - ${config.db.database}`);
+  res.send(`Request received: ${req.method} - ${req.path}`);
 });
 
 module.exports = app;
