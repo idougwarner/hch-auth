@@ -1,5 +1,5 @@
-org: hchdev
-app: hc-auth
+org: idougwarner
+app: hc
 component: express
 name: auth-backend
 description: Deploy the authorization backend of Home Captain
