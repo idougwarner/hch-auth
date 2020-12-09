@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pg:
+    image: "postgres:12"
+    container_name: "hch-postgres"
+    environment:
+      POSTGRES_DB: hchdb
+      POSTGRES_PASSWORD: upwork!2#4
+      POSTGRES_USER: dougwarner
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg/db_data:/var/lib/postgresql/data

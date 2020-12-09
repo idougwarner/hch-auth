@@ -1,0 +1,16 @@
+{
+  "testRegex": "((\\.|/*.)(spec))\\.js?$",
+  "moduleDirectories": ["node_modules"],
+  "moduleFileExtensions": ["js"],
+  "moduleNameMapper": {
+    "^@src/(.*)$": "<rootDir>/src/$1"
+  },
+  "setupFiles": ["<rootDir>/__test__/unit/setup.js"],
+  "testEnvironment": "node",
+  "transform": {
+    ".*.js": "<rootDir>/node_modules/babel-jest"
+  },
+  "globals": {
+    "TESTING": true
+  }
+}

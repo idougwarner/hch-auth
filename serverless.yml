@@ -1,0 +1,31 @@
+org: hchdev
+app: homecaptain
+component: express
+name: auth-backend
+description: Deploy the authorization backend of Home Captain
+
+inputs:
+  region: us-west-2
+  src:
+    src: ./src
+    hook: npm run build
+    dist: ./build
+  # domain: ${param:BASE_URL}
+  env:
+    BASE_URL: ${param:BASE_URL}
+    FRONTEND_BASE_URL: ${param:FRONTEND_BASE_URL}
+    PASSPORT_SECRET: ${param:PASSPORT_SECRET}
+
+    DB_HOST: ${param:DB_HOST}
+    DB_PORT: ${param:DB_PORT}
+    DB_NAME: ${param:DB_NAME}
+    DB_USER: ${param:DB_USER}
+    DB_PASSWORD: ${param:DB_PASSWORD}
+
+    FACEBOOK_CLIENT_ID: ${param:FACEBOOK_CLIENT_ID}
+    FACEBOOK_CLIENT_SECRET: ${param:FACEBOOK_CLIENT_SECRET}
+    FACEBOOK_CALLBACK_PATH: ${param:FACEBOOK_CALLBACK_PATH}
+
+    GOOGLE_CLIENT_ID: ${param:GOOGLE_CLIENT_ID}
+    GOOGLE_CLIENT_SECRET: ${param:GOOGLE_CLIENT_SECRET}
+    GOOGLE_CALLBACK_PATH: ${param:GOOGLE_CALLBACK_PATH}
